@@ -1,66 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Druska Ventures Inc. | Property Ownership & Management</title>
+---
+layout: default
+title: Home
+---
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.2rem;
-      background-size: cover;
-    }
-    
-    .content-wrapper {
-      background-color: #4C64A4;
-      padding: 3em;
-      min-height: 100vh;
-      color: #fff;
-    }
-    
-    .content-wrapper a {
-      color: #fff;
-    }
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-    .card {
-      background-color: #4C64A4;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="content-wrapper">
-    <section id="about" class="py-5">
-      <div class="container">
-        <h2 class="mb-4 text-primary border-bottom pb-2">About Us</h2>
-        <p class="lead">
-          Druska Ventures Inc. is a property ownership and management firm located in the Greater Toronto Area. We aim to provide a comfortable, welcoming, and affordable home for renters. We invest in a superior tenant experience through high-quality properties, finishings, and a streamlined household experience. We value our tenants and see them as integral to our success, which is why we accommodate needs and maintain open communication.
-        </p>
-      </div>
-    </section>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="mb-4 text-primary border-bottom pb-2">Contact Us</h2>
-        <p class="lead">
-          To see open properties or for any inquiries such as investment opportunities, please reach out to our team.
-        </p>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <strong>Email:</strong>
-            <a href="mailto:info@druskaventures.com">info@druskaventures.com</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    {{ post.content }}
+  </article>
+  {% endfor %}
+</div>
 
-  </div>
-</body>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</html>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
