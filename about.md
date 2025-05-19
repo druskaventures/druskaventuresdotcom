@@ -1,18 +1,17 @@
 ---
-layout: page
-title: About
+layout: default
+title: "Druska Ventures Inc. | Property Ownership & Management"
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## About Us
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Druska Ventures Inc. is a property ownership and management firm located in the Greater Toronto Area. We aim to provide a comfortable, welcoming, and affordable home for renters. We invest in a superior tenant experience through high-quality properties, finishings, and a streamlined household experience. We value our tenants and see them as integral to our success, which is why we accommodate needs and maintain open communication.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+---
 
+## Contact Us
 
-[jekyll-organization]: https://github.com/jekyll
+To see open properties or for any inquiries such as investment opportunities, please reach out to our team:
+
+- **Email:** [info@druskaventures.com](mailto:info@druskaventures.com)
